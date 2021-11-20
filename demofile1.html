@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>My Header</h1>
+    <p>My paragraph.</p>
+    <script>
+      fetch("http://localhost:8080/summer.html")
+        .then((res) => console.log({ data: res }))
+        .catch((err) => console.log({ err }));
+    </script>
+  </body>
+</html>
