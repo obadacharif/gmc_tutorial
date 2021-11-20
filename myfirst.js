@@ -1,50 +1,52 @@
-var http = require('http');
+/*var http = require('http');
 
 
 http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/html'});
+  console.log("LOG  " + new Date() + " : " + req.url);
   res.write( "hello world ! : " +  req.url);
   res.end();
 }).listen(8080);
-
-/*
+*/
+/*http://127.0.0.1:8080/api/users?year=1995&month=mars
 var url = require('url');
 var http = require('http');
 http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/html'});
   var q = url.parse(req.url, true).query;
   var txt = q.year + " " + q.month;
+  console.log(txt);
   res.end(txt);
 }).listen(8080);*/
 /*
-var http = require('http');
-var fs = require('fs');
-http.createServer(function (req, res) {
-  /*
-    fs.appendFile('mynewfile1.txt', 'Hello content!', function (err) {
-    if (err) throw err;
-    console.log('Saved!');
-  });
-  
-  fs.open('mynewfile2.txt', 'w', function (err, file) {
-    if (err) throw err;
-    console.log('Saved!');
-  });
-  fs.writeFile('mynewfile3.txt', 'Hello content!', function (err) {
-  if (err) throw err;
-  console.log('Saved!');
-});
+var http = require("http");
+var fs = require("fs");
 
- 
+http
+  .createServer(function (req, res) {
+    
+    // fs.appendFile("mynewfile1.txt", "Hello content!", function (err) {
+    //   if (err) throw err;
+    //   console.log("Saved!");
+    // });
 
-  fs.readFile('demofile1.html', function(err, data) {
-    res.writeHead(200, {'Content-Type': 'text/html'});
-    res.write(data);
-    return res.end();
-  });
-}).listen(8080);
- */
+    // fs.open("mynewfile2.txt", "w", function (err, file) {
+    //   if (err) throw err;
+    //   console.log("Saved!");
+    // });
 
+    // fs.writeFile("mynewfile3.txt", "Hello content!", function (err) {
+    //   if (err) throw err;
+    //   console.log("Saved!");
+    // });
+
+    fs.readFile("demofile1.html", function (err, data) {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      return res.end();
+    });
+  })
+  .listen(8080); */
 /*
 var http = require('http');
 var url = require('url');
@@ -65,7 +67,6 @@ http.createServer(function (req, res) {
 }).listen(8080);
 */
 
-/*
 var http = require("http");
 var url = require("url");
 var fs = require("fs");
@@ -137,4 +138,4 @@ http
       return res.end();
     });
   })
-  .listen(8080);*/
+  .listen(8080);
